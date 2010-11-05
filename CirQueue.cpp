@@ -1,11 +1,8 @@
-
-#include "stdafx.h"
-
 #include<iostream>
 using namespace std;
 #include "CirQueue.h"
 
-int _tmain(int argc, _TCHAR* argv[])
+int main()
 {
 	CirQueue<int>* Q=new CirQueue<int>();
 	Q->InitQueue();
