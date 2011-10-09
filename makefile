@@ -1,4 +1,6 @@
 CirQueue.o :CirQueue.cc
 	gcc -c CirQueue.cc
-#gcc -shared -Wall -fPIC CirQueue.o -o liblt.so  
-#gcc -o CirQueue.exe test.o -lCirQueue -B .
+liblt.so :
+	gcc -shared -Wall -fPIC CirQueue.o -o liblt.so  
+CirQueue.exe :
+	gcc -o CirQueue.exe test.o -lCirQueue -B .
