@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 #define QueueSize 10   //应根据具体情况定义该值
 

@@ -1,6 +1,24 @@
-CirQueue.o :CirQueue.cc
-	gcc -c CirQueue.cc
-liblt.so :
-	gcc -shared -Wall -fPIC CirQueue.o -o liblt.so  
-CirQueue.exe :
-	gcc -o CirQueue.exe test.o -lCirQueue -B .
+#
+## Simple .so Makefile
+#
+#
+CC      := gcc
+LD      := ld
+CFLAGS  :=
+LDFLAGS := -shared -fPIC
+SOURCE  := $(wildcard *.c)
+OBJS    := $(patsubst %.c,%.o,$(SOURCE))
+TARGET_LIB := x.so
+
+all:$(OBJS)
+	    echo $(OBJS)
+			    $(LD) $(LDFLAGS) -o $(TARGET_LIB) $(OBJS) 
+
+%.o:%.c
+	    @echo Compiling $< ...
+			    $(CC) -c $(CFLAGS)  $< -o $*.o
+
+.PHONY: clean
+
+clean:
+	    rm *.so *.o -rf
