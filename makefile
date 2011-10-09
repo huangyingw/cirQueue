@@ -1,3 +1,4 @@
-OBJECTS = CirQueue.exe
-include ../../GNU_makefile_template
-LOCFLAGS = -I../CirQueue
+CirQueue.o :CirQueue.cc
+	gcc -c CirQueue.cc
+#gcc -shared -Wall -fPIC CirQueue.o -o liblt.so  
+#gcc -o CirQueue.exe test.o -lCirQueue -B .
