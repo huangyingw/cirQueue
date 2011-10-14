@@ -37,16 +37,3 @@ template<class Type> int CirQueue<Type>::QueueFull()
 {
   return count==QueueSize;
 }
-
-template<class Type> void CirQueue<Type>::EnQueue(Type x)
-{
-  if(QueueFull())
-  {
-    cout<<"when try to input data:"<<x;
-    Error("Queue overflow so shrow out");
-    cout<<DeQueue()<<endl;
-  }
-  count++;
-  data[rear]=x;
-  rear=(rear+1)%QueueSize;
-}

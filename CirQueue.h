@@ -15,5 +15,4 @@ template <class Type> class CirQueue
     void InitQueue();
     void Error(char* message);
     int QueueFull();
-    void EnQueue(Type x);
 };
