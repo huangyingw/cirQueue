@@ -1,4 +1,4 @@
-CirQueue.o :CirQueue.cc
-	gcc -c CirQueue.cc
-#gcc -shared -Wall -fPIC CirQueue.o -o liblt.so  
-#gcc -o CirQueue.exe test.o -lCirQueue -B .
+main:
+	g++ -fPIC -shared CirQueue.cc -o libCirQueue.so
+	g++ -fPIC -L. test.cc -o test -lCirQueue
+	export LD_LIBRARY_PATH=.
