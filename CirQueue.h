@@ -14,5 +14,4 @@ template <class Type> class CirQueue
     int QueueFront();
     void InitQueue();
     void Error(char* message);
-    int QueueFull();
 };

@@ -32,8 +32,3 @@ template<class Type> void CirQueue<Type>::InitQueue()
   front=rear=0;
   count=0;
 }
-
-template<class Type> int CirQueue<Type>::QueueFull()
-{
-  return count==QueueSize;
-}
