@@ -1,4 +1,4 @@
-#include "CirQueue.h"
+#include "CirQueue.hpp"
 int main()
 {
   CirQueue<int>* Q=new CirQueue<int>();

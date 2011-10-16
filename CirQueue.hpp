@@ -1,4 +1,23 @@
-#include "CirQueue.h"
+#include <iostream>
+using namespace std;
+#define QueueSize 10
+
+template <class Type> class CirQueue
+{               
+  public:
+    int front;
+    int rear;
+    int count;
+    Type data[QueueSize];
+    int QueueEmpty();
+    Type DeQueue();
+    int QueueFront();
+    void InitQueue();
+    void Error(char* message);
+    int QueueFull();
+    void EnQueue(Type x);
+};
+
 template<class Type> int CirQueue<Type>::QueueEmpty()
 {
   return count==0;
